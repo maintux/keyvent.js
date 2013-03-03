@@ -27,6 +27,7 @@
     for (var i = 0; i < keys.length; i++) {
       var keyCode = toKeyCode(keys[i])
       event.which = keyCode;
+      event.keyCode = keyCode;
       MODIFIERS[keyCode] && (event[MODIFIERS[keyCode] + 'Key'] = true);
       element.dispatchEvent(event);
     };
